@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-7mQhpDl5nRA5nY9lr8F1st2NbIly/8WqhjTp+0oFxEA/QUuvlbF6M1KXezGBh3Nb" crossorigin="anonymous" />
+    <!-- My CSS-->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>IJUL</title>
+  </head>
+  <body>
+    <script>
+      document.write(Date());
+    </script>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #51888a">
+      <div class="container">
+        <a class="navbar-brand" href="#">Jhon Doe</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Portofolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
+
+    <!-- Jumbotron -->
+    <section class="jumbotron text-center">
+      <img src="img/profil.png" alt="Jhon Doe" width="150" class="rounded-circle img-thumbnail" />
+      <h3 class="display"><b>I'm Web Developer</b></h3>
+      <p class="lead">Build Web With Me</p>
+    </section>
+    <!-- Akhir Jumbotron-->
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2><b>About</b></h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <p><img src="img/picture.jpg" alt="picture" width="150" /></p>
+          </div>
+          <div class="col-md-9">
+            <div style="text-align: justify">
+              <p>
+                it'is a long established fact that e reader will be distracted by the readable conten of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
+                opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search form "lorem ipsum" will
+                uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br />
+    <!-- Akhir About-->
+
+    <!-- portofolio-->
+    <section id="portofolio">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2><b>Portofolio</b></h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-3">
+            <div class="card" style="width: 18rem">
+              <img src="img/foto5.png" class="card-img-top" alt="portofolio" />
+              <div class="card-body">
+                <p class="card-text">Portofolio 1</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <div class="card" style="width: 18rem">
+              <img src="img/foto5.png" class="card-img-top" alt="portofolio" />
+              <div class="card-body">
+                <p class="card-text">Portofolio 2</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <div class="card" style="width: 18rem">
+              <img src="img/foto5.png" class="card-img-top" alt="portofolio" />
+              <div class="card-body">
+                <p class="card-text">Portofolio 3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- akhir portofolio-->
+
+    <!-- contact-->
+    <section id="contact">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2><b>Contact</b></h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="mb-3">
+           <label for="name">Name</label>
+           <input type="text" class="form-control"  id="name" >
+         </div>
+        <div class="mb-3">
+           <label for="email">Email</label>
+           <input type="text" class="form-control"  id="email">
+         </div>
+           <label for="message">Message</label>
+           <input type="text" class="form-control" id="message"><br><br>
+           <button onclick="tampilkan()" class="btn btn-primary">Submit</button>
+           <div id="demo"></div>
+    </section>
+
+    <script>
+      let daftartamu = [];
+
+      function tampilkan() {
+        tamu = {};
+
+        var demo = document.getElementById("demo");
+
+        var name = document.getElementById("name").value;
+        tamu.name = name;
+
+        var email = document.getElementById("email").value;
+        tamu.email = email;
+
+        var message = document.getElementById("message").value;
+        tamu.message = message;
+
+        daftartamu.push(tamu);
+
+        demo.innerHTML = "Daftar Tamu";
+        demo.innerHTML += "<br/>";
+        demo.innerHTML += "<br/>";
+
+        daftartamu.forEach(function (value, key) {
+          demo.innerHTML += "";
+          demo.innerHTML += key + 1;
+          demo.innerHTML += ".";
+
+          demo.innerHTML += value.name;
+          demo.innerHTML += " | ";
+
+          demo.innerHTML += value.email;
+          demo.innerHTML += " | ";
+
+          demo.innerHTML += value.message;
+          demo.innerHTML += " | ";
+
+          demo.innerHTML += "<br/>";
+        });
+      }
+    </script>
+    <!-- akhir contact-->
+
+    <!-- footer-->
+    <footer style="background-color: #51888a">
+      <p>
+        <i
+          ><center><b>Copyright 2022</b></center></i
+        >
+      </p>
+    </footer>
+    <!-- akhir footer-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>
